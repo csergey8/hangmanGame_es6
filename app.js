@@ -15,7 +15,7 @@ window.addEventListener('keypress', (e) => {
     guessesEl.textContent = game1.statusMsg;
 });
 
-getPuzzle(1)
+getPuzzle(5)
     .then((puzzle) => {
         console.log(puzzle);
     })
@@ -26,8 +26,8 @@ getPuzzle(1)
 const code = 'UA';
 
 getCountry(code)
-    .then((data) => {
-        console.log(data.name);
+    .then((countryName) => {
+        console.log(countryName);
     })
     .catch((err) => {
         console.log(err);
