@@ -23,16 +23,6 @@ getPuzzle(5)
         console.log(err);
     })
 
-const code = 'UA';
-
-getCountry(code)
-    .then((countryName) => {
-        console.log(countryName);
-    })
-    .catch((err) => {
-        console.log(err);
-    })
-
 
 const createTipper = (tip) => {
     return (amount) => {
@@ -40,4 +30,9 @@ const createTipper = (tip) => {
     }
 }
 
+getLocation().then((data) => {
+    return getCountry(data.country) 
+}).then((country) => {
+    console.log(country)
+})
 

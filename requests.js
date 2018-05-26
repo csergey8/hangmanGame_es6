@@ -94,3 +94,12 @@ const getCountry = (code) => {
             return data.name
         })
 }
+
+const getLocation = () => {
+    return fetch('https://ipinfo.io/json?token=4124b2d5c09d7d')
+        .then((response) => {
+            if (response.status === 200) {
+                return response.json();
+            }
+        })
+}
