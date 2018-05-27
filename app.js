@@ -36,3 +36,8 @@ getLocation().then((data) => {
     console.log(country)
 })
 
+getCurrentCountry().then((country) => {
+    console.log(country);
+})
+
+
