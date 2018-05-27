@@ -4,7 +4,14 @@ const reset = document.querySelector('#reset');
 let game1;
 
 const render = () => {
-    puzzleEl.textContent = game1.puzzle;
+    puzzleEl.innerHTML = '';
+    const puzzle = game1.puzzle.split('');
+    puzzle.forEach(letter => {
+        const letterEl = document.createElement('span');
+        letterEl.textContent = letter;
+        puzzleEl.appendChild(letterEl);
+    });
+    
     guessesEl.textContent = game1.statusMsg;
 }
 

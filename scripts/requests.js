@@ -106,7 +106,7 @@
 
 // Use ASYNC AWAIT 
 const getPuzzle = async (wordCount) => {
-    const response = await fetch(`http://puzzle.mead.io/puzzle?wordCount=${wordCount}`, {})
+    const response = await fetch(`//puzzle.mead.io/puzzle?wordCount=${wordCount}`, {})
     if (response.status ===  200) {
         const data = await response.json();
         return data.puzzle
@@ -117,7 +117,7 @@ const getPuzzle = async (wordCount) => {
 
 //ASYNC AWAIT
 const getCountry = async (code) => {
-    const response = await fetch(`https://restcountries.eu/rest/v2/alpha/${code}`)
+    const response = await fetch(`//restcountries.eu/rest/v2/alpha/${code}`)
     if (response.status === 200) {
         const country = await response.json();
         return country.name
@@ -137,10 +137,10 @@ const getLocation = async () => {
 }
 //ASYNC AWAIT
 const getCurrentCountry = async () => {
-    const response = await fetch('https://ipinfo.io/json?token=4124b2d5c09d7d')
+    const response = await fetch('//ipinfo.io/json?token=4124b2d5c09d7d')
     if (response.status === 200) {
         const data = await response.json();
-        const res = await fetch(`https://restcountries.eu/rest/v2/alpha/${data.country}`)
+        const res = await fetch(`//restcountries.eu/rest/v2/alpha/${data.country}`)
         if (res.status === 200) {
             const data = await res.json();
             return data.name
