@@ -1,3 +1,6 @@
+import Hangman from './hangman';
+import { getPuzzle } from './requests';
+
 const puzzleEl = document.querySelector('#puzzle');
 const guessesEl = document.querySelector('#guesses');
 const reset = document.querySelector('#reset');
@@ -31,25 +34,3 @@ window.addEventListener('keypress', (e) => {
     game1.makeGuesse(guess);
     render();
 });
-
-// getPuzzle(5)
-//     .then((puzzle) => {
-//         console.log(puzzle);
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     })
-
-
-
-// getLocation().then((data) => {
-//     return getCountry(data.country) 
-// }).then((country) => {
-//     console.log(country)
-// })
-
-// getCurrentCountry().then((country) => {
-//     console.log(country);
-// })
-
-
